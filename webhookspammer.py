@@ -45,6 +45,7 @@ async def send_messages_from_webhooks(webhooks, num_requests, ping_everyone, req
             await asyncio.sleep(request_sleep)  # Wait between requests
 
 async def main():
+    ctypes.windll.kernel32.SetConsoleTitleW("Webhook Spammer by Kropa")
     try:
         num_webhooks = int(input(Fore.LIGHTYELLOW_EX + f"[?]{Style.RESET_ALL} Enter the number of webhooks to use: "))
     except ValueError:
