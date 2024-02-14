@@ -5,6 +5,8 @@ import asyncio
 import random
 import string
 from colorama import Fore, Style, init
+import ctypes
+
 init()
 
 def generate_random_string(length=10):
@@ -45,8 +47,9 @@ async def send_messages_from_webhooks(webhooks, num_requests, ping_everyone, req
             await asyncio.sleep(request_sleep)  # Wait between requests
 
 async def main():
+    ctypes.windll.kernel32.SetConsoleTitleW("Webhook Spammer by Kropa")
+
     try:
-        ctypes.windll.kernel32.SetConsoleTitleW("Webhook Spammer by Kropa")
         num_webhooks = int(input(Fore.LIGHTYELLOW_EX + f"[?]{Style.RESET_ALL} Enter the number of webhooks to use: "))
     except ValueError:
         print(Fore.LIGHTRED_EX + f"[-]{Style.RESET_ALL} Invalid input. Please enter a valid number.")
