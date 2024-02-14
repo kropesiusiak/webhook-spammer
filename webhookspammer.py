@@ -1,3 +1,5 @@
+# https://github.com/kropesiusiak/webhook-spammer
+
 import aiohttp
 import asyncio
 import random
