@@ -1,2 +1,2 @@
-# webhook-spammer
-Python Webhook Spammer using aiohttp.
+# Webhook Spammer
+## Free to use
